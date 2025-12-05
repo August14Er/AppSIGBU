@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "411648227348",
+    "project_id": "appsigbu",
+    "storage_bucket": "appsigbu.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411648227348:android:6eb04d87237497c11c0f01",
+        "android_client_info": {
+          "package_name": "com.example.appsigbu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-QYC0rUAZsRnw9tADtulxKl8UbmZ9iR0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

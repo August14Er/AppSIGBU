@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.transfer.TransferActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nueva Transferencia"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:textColor="#333333"/>
+
+    <LinearLayout
+        android:id="@+id/layoutPaso1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Área de Origen (Desde donde salen)"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spOrigen"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Área Destino (A donde van)"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spDestino"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Sustento / Motivo">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSustento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="2"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSiguiente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Siguiente: Seleccionar Bienes"
+            android:layout_marginTop="24dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutPaso2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccione los bienes a mover:"
+            android:textColor="#0D6EFD"
+            android:layout_marginBottom="8dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressBarTransfer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBienesTransfer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnConfirmar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="CONFIRMAR SOLICITUD"
+            android:backgroundTint="#198754"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancelar / Volver"
+            android:backgroundTint="#6C757D"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+</LinearLayout>
